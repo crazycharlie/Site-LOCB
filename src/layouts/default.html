@@ -1,0 +1,133 @@
+<!doctype html>{{!-- This is the base layout for your project, and will be used on every page. --}}
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="{{root}}assets/css/foundation.min.css">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="{{root}}assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="{{root}}assets/css/owl.theme.css" />
+    <link rel="stylesheet" href="{{root}}assets/css/owl.transitions.css" />
+    <link rel="icon" href="{{root}}assets/img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas-content" data-off-canvas-content>
+
+          <div class="row pad-topbot-1">
+            <div class="large-12 columns text-upper">
+              <div class="small-12 medium-6 large-4 columns text-center">
+                <small id="clock"></small>
+              </div>
+              <div class="contacts small-12 medium-6 large-4 columns text-center">
+                <small><a href="/">Home</a></small>
+                <small class="phone">1-214-934-0055</small>
+                <small class="email"><a href="mailto:info@cameronbyrdlaw.com">email us</a></small>
+              </div>
+            </div>
+          </div>
+
+          <!-- off-canvas title bar for 'small' screen -->
+          <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="large">
+            <div class="title-bar-left">
+              <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+              <span class="title-bar-title">Menu</span>
+            </div>
+          </div>
+
+          <!--//Off-Canvas Left Menu -->
+          <div id="offCanvasLeft" class="off-canvas position-left" data-off-canvas>
+            <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="large">
+              <div class="title-bar-left">
+                <span class="title-bar-title">Law Office of Cameron Byrd</span>
+              </div>
+            </div>
+            <ul class="vertical dropdown menu" data-dropdown-menu>
+              <li class="small-12"><a class="button" href="/">Home</a></li>
+              <li class="small-12"><a class="button" href="/dallas-traffic-ticket-attorney.html">Tickets</a></li>
+              <li class="small-12"><a class="button" href="/dallas-traffic-warrants.html">Warrants</a></li>
+              <li class="small-12"><a class="button" href="/dallas-criminal-defense.html">Criminal Defense</a></li>
+              <li class="small-12"><a class="button" href="/dallas-escrow-attorney.html">Escrow</a></li>
+              <li class="small-12"><a class="button" href="/dallas-personal-injury-attorney.html">Personal Injury</a></li>
+              <li class="small-12"><a class="button" href="/client-testimonials.html">Testimonials</a></li>
+            </ul>
+          </div>
+
+          <!--//Large Top Menu-->
+          <div class="row marg-bot-2">
+            <div class="large-12">
+              <div id="widemenu">
+                <div class="top-bar-middle">
+                  <ul class="dropdown menu" data-responsive-menu="drilldown large-dropdown">
+                    <li class="large-2 columns"><a class="button" href="/dallas-traffic-ticket-attorney.html">Tickets</a></li>
+                    <li class="large-2 columns"><a class="button" href="/dallas-traffic-warrants.html">Warrants</a></li>
+                    <li class="large-2 columns"><a class="button" href="/dallas-criminal-defense.html">Criminal Defense</a></li>
+                    <li class="large-2 columns"><a class="button" href="/dallas-escrow-attorney.html">Escrow</a></li>
+                    <li class="large-2 columns"><a class="button" href="/dallas-personal-injury-attorney.html">Personal Injury</a></li>
+                    <li class="large-2 columns"><a class="button" href="/client-testimonials.html">Testimonials</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="large-12 columns">
+                  <section class="main-section">
+                      <h2 id="siteTitle">The Law Office of Cameron Byrd</h2>
+                  </section>
+              </div>
+          </div>
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+          <footer>
+              <div class="inside text-center">
+                Law Office of Cameron Byrd  | 1-214-934-0055  |
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"> 
+                <span itemprop="streetAddress">1307 West Davis</span>, 
+                <span itemprop="addressLocality">Dallas</span>, 
+                <span itemprop="addressRegion">Texas</span> 
+                <span itemprop="postalCode">75208 </span> | &copy; 2015</span>
+                <h3>Dallas, Texas Traffic Ticket Attorney</h3>
+              </div>
+          </footer>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="{{root}}assets/js/jquery.min.js"></script>
+    <script src="{{root}}assets/js/what-input.min.js"></script>
+    <script src="{{root}}assets/js/foundation.min.js"></script>
+    <script src="{{root}}assets/js/app.js"></script>
+    <script src="{{root}}assets/js/owl.carousel.min.js"></script>
+    <script src="{{root}}assets/js/date.js"></script>
+    <script>
+        $(function(){
+          myclock();
+          $('#mainHero').owlCarousel({
+            navigation: false,
+            autoPlay: 5000,
+            items: 1,
+            singleItem: true,
+            slideSpeed : 400,
+            paginationSpeed : 1200
+          });
+        });
+        // $(window).on('resize', function() {
+        //   if (window.reloadPage) clearTimeout(window.reloadPage);
+        //   window.reloadPage = setTimeout(function()
+        //   {
+        //     this.location.reload(false); /* false to get page from cache */
+        //   }, 100);
+        // });
+    </script>
+  </body>
+</html>
